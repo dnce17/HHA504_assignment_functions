@@ -1,0 +1,37 @@
+name: pubmed_update
+
+on:
+  schedule:
+    - cron: "* * * * *" # run every minute
+  workflow_dispatch:  # manual triggers
+
+jobs:
+  # Name of job
+  run-print-script:
+    # Pull down img of ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo content
+        uses: actions/checkout@v4
+
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+          cache: 'pip'
+        
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Print Script
+        # Not needed for my particular script, but here for future reference
+        # env:
+        #   SOME_API_KEY: ${{ secrets.SOME_API_KEY }}
+        # Location where your python file to run is
+        run: python script.py # run script
+
+
+# Extras for future reference
+# https://crontab.guru/ provides examples of codes to set up scheduled intervals
+# Resend.com --> py package for sending emails
+     

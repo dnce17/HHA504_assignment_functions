@@ -1,8 +1,8 @@
 name: make_a_joke
 
 on:
-  schedule:
-    - cron: "* * * * *" # run every minute
+  # schedule:
+  #   - cron: "* * * * *" # run every minute
   workflow_dispatch:  # manual triggers
 
 jobs:

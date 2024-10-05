@@ -75,8 +75,34 @@
     * Azure 
 ![Testing func outside of Azure](img/azure/deploy/deploy_11.png)
 
-### Documentation of Cloud Scheduler setup.
+### Screenshots and Documentation of Cloud Scheduler Setup
+1. Click "Cloud Scheduler" 
+![Click "Cloud Scheduler"](img/gcp/scheduler/scheduler_1.png)
+2. Enable API if needed 
+![Enable Cloud Scheduler API if needed](img/gcp/scheduler/scheduler_2.png)
+3. Create a job
+![Create a job](img/gcp/scheduler/scheduler_3.png)
+4. The following configurations were used 
+    * NOTES
+        * Configurations will differ based on the cloud function to be used as URL and timezone
+        * After finishing each section's configuration, either click "Continue" or the next header below it
+!["Define the schedule" header configs](img/gcp/scheduler/scheduler_4.png)
+!["Configure the execution" header configs](img/gcp/scheduler/scheduler_5.png)
+    * NOTE: To find your timezone
+        1. Type and select your country
+        2. Type the time zone
+        3. Scroll to find your state's specific time zone
+    * Example:
+![Type and selected "United States"](img/gcp/scheduler/find_time_zone_1.png)
+![Type and selected timezone](img/gcp/scheduler/find_time_zone_2.png)
+5. Click "Create"
+6. To test if the scheduler works, you can
+    * click "Force Run"
+    * wait for the duration set in Cloud Scheduler to elapse (1 minute in this example)
+![scheduler successfully made](img/gcp/scheduler/scheduler_6.png)
 
 ## GitHub
 ### Code and Configuration for the Cron Job
+* The cron job's code for sending an email and making a joke is in [send_email.py](https://github.com/dnce17/HHA504_assignment_functions/blob/main/send_email.py) and [make_joke.py](https://github.com/dnce17/HHA504_assignment_functions/blob/main/make_joke.py), respectively. Their configurations are in the [.github/workflows](https://github.com/dnce17/HHA504_assignment_functions/tree/main/.github/workflows) folder
 
+## Brief Reflection on Use Cases, Benefits, and Limitations of Serverless Functions

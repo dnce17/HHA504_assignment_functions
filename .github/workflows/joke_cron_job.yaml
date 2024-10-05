@@ -2,12 +2,12 @@ name: make_a_joke
 
 on:
   schedule:
-    - cron: "*/5 * * * *" # run every minute
+    - cron: "* * * * *" # run every minute
   workflow_dispatch:  # manual triggers
 
 jobs:
   # Name of job
-  run-print-script:
+  run-joke-script:
     # Pull down img of ubuntu
     runs-on: ubuntu-latest
     steps:
@@ -23,12 +23,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run Print Script
+      - name: Run Joke Script
         # Not needed for my particular script, but here for future reference
         # env:
         #   SOME_API_KEY: ${{ secrets.SOME_API_KEY }}
         # Location where your python file to run is
-        run: python script.py # run script
+        run: python make_joke.py # run script
 
 
 # Extras for future reference

@@ -1,4 +1,4 @@
-name: pubmed_update
+name: make_a_joke
 
 on:
   schedule:

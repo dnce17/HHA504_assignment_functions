@@ -113,6 +113,8 @@
 Reflect on the use cases for serverless functions in cloud environments. Consider the benefits and limitations of using Functions as a Service (FaaS) in both Azure and GCP.
 
 **Answer**:
+Some use cases of serverless functions are scheduling tasks and creating trigger events. Scheduling tasks might include sending notifications or updating data at a certain time daily. Trigger events can include when users upload something or enter a website. 
+
 One benefit of using FaaS in both Azure and GCP is that users only pay for when the functions run, removing the need to predict how much capacity is needed in advance and risk overpaying for capacity that may not be used. Another benefit is that users do not have to worry about managing the server; they can focus solely on the code rather than the infrastructure. 
 
 One limitation of FaaS is that debugging may be more difficult since the server is managed by the vendor. Security may also be a concern for FaaS; while users are responsible for securely configuring their functions, they also rely on the vendor to ensure that the underlying infrastructure is secure.
